@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Proposal Generator</title>
+	 <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/print.min.css" rel="stylesheet">
+	
+	<link rel= "stylesheet" href= "./css/bootstrap-datepicker.min.css" />
+	<link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
+	<link href="fonts/Ysabeau-VariableFont_wght.ttf" rel="stylesheet">
+	<link href="https://fonts.cdnfonts.com/css/mont" rel="stylesheet">
+    <!-- Main CSS -->
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		.flex_subdiv .error {
+			position: absolute;
+			bottom: 0;
+		}
+	</style>
+
+</head>
+<body>
+
+	<div class="container clearboth">
+		<div class="row price_container top_section">
+			<div class="col-sm-4">
+				<img src="images/logo.png" alt="logo" id="logo" class=""/>
+			</div>
+			<div class="col-sm-8">
+				<h1 class="text-left" class="">Upgrade Proposal Generator</h1>
+			</div>
+		</div>
+		
+		<div class="row price_container">
+
+			<form id="priceCalcForm">
+				<div class="row input_field ">
+					<div class="col-sm-6">
+						<div class="flex_row_inp">
+							<label>
+								Date
+							</label>
+							<div class="">
+								<input type="text" id="main_date" class="number_req form-control main_date date_picker_input" name ="main_date" value="" required/>
+							</div>	
+						</div>
+					</div>
+				</div>	
+				
+				
+				<div class="row input_field">
+					<div class="col-sm-12">
+						<h2 class="text-left inline_block">Project Details</h2>
+					</div>
+					
+					<div class="col-sm-6 flex_col basis_42">
+						
+						<div class="flex_row_inp">
+							<label>
+								Client Name
+							</label>
+							<div class="">
+								<input type="text" id="b_name_1" class="number_req form-control b_name_1" name ="b_name_1" value="bill to name"/>
+							</div>
+						</div>
+						<div class="flex_row_inp">
+							<label>
+								Delivery Address
+							</label>
+							<div class="">
+								<input type="text" id="b_address_1" class="number_req form-control b_address_1 address_class" name ="b_address_1" value="address input 1"/>
+							</div>
+						</div>
+						<div class="flex_row_inp">
+							<label>
+								Delivery Address 2
+							</label>
+							<div class="">
+								<input type="text" id="b_address_2" class="number_req form-control b_address_2 address_data_2" name ="b_address_2" value="address input 2"/>
+							</div>
+						</div>
+						<!--
+						<div class="col-sm-12">
+							<label>
+								Phone
+							</label>
+							<div class="">
+								<input type="text" id="b_phone_1" class="number_req form-control b_phone_1 address_next_focus" name ="b_phone_1" value="1234567899"/>
+							</div>
+						</div>
+						-->
+					</div>
+					
+					<div class="col-sm-6 flex_col basis_42">
+					<div class="flex_row_inp">
+						<label>
+							Delivery Contact
+						</label>
+						<div class="">
+							<input type="text" id="delivery_contact" class="number_req form-control delivery_contact" name ="delivery_contact" value="test projext" required/>
+						</div>	
+					</div>
+					
+					<div class="flex_row_inp">
+						<label>
+							Client Email
+						</label>
+						<div class="">
+							<input type="email" id="project_email" class="number_req form-control project_email" name ="project_email" placeholder="project@email.com" required/>
+						</div>	
+					</div>
+					
+					<div class="flex_row_inp">
+						<label>
+							Designer
+						</label>
+						<div class="">
+							<select id="kitchen_designer" name ="kitchen_designer" required="required">
+								<option name="faigy" value="Faigy Lesin"> Faigy Lesin </option>
+								<option name="rivka" value="Rivka Hess"> Rivka Hess </option>
+								<option name="lazer" value="Lazer Katz"> Lazer Katz </option>
+							</select>
+						</div>	
+					</div>
+				</div>
+				
+					<!--
+					<div class="col-sm-6">
+						<h2>Ship To</h2>
+						
+						<div class="col-sm-12">
+							<label>
+								Address
+							</label>
+							<div class="">
+								<input type="text" id="s_address_1" class="number_req form-control s_address_1 address_class" name ="s_address_1" value="address input 1_2"/>
+							</div>
+						</div>
+						<div class="col-sm-12">
+							<label>
+								Address 2
+							</label>
+							<div class="">
+								<input type="text" id="s_address_2" class="number_req form-control s_address_2 address_data_2" name ="s_address_2" value="address input 2_2"/>
+							</div>
+						</div><div class="col-sm-12">
+							<label>
+								Delivery Contact Name
+							</label>
+							<div class="">
+								<input type="text" id="s_name_1" class="number_req form-control s_name_1 address_next_focus" name ="s_name_1" value="name 2"/>
+							</div>
+						</div>
+						<div class="col-sm-12">
+							<label>
+								Contact Phone
+							</label>
+							<div class="">
+								<input type="text" id="s_phone_1" class="number_req form-control s_phone_1" name ="s_phone_1" value="9876543211"/>
+							</div>
+						</div>
+					</div>
+					-->
+				</div>	
+					
+				<br/>
+				
+				<div class="row input_field">
+					<div class="col-sm-12">
+						<h2 class="text-left inline_block">Specifications</h2>
+					</div>
+					
+					<div class="col-sm-6 flex_col basis_42">
+						
+						<div class="flex_row_inp">
+							<label>
+								Manufacturer : 
+							</label>
+							<div class="">
+								<input type="text" id="c_vendor" class="number_req form-control c_vendor" name ="c_vendor" value="vendor name"/>
+							</div>	
+						</div>
+						<div class="flex_row_inp">
+							<label>
+								Door Style
+							</label>
+							<div class="">
+								<input type="text" id="c_doorstyle" class="number_req form-control c_doorstyle" name ="c_doorstyle" value="door input"/>
+							</div>	
+						</div>
+						<div class="flex_row_inp">
+							<label>
+								Door Species
+							</label>
+							<div class="">
+								<input type="text" id="c_species" class="number_req form-control c_species" name="c_species" value="notes input"/>
+							</div>
+						</div>
+						
+						<div class="flex_row_inp">
+							<label>
+								Door Finish
+							</label>
+							<div class="">
+								<input type="text" id="c_finish" class="number_req form-control c_finish" name ="c_finish" value="finish input"/>
+							</div>
+						</div>
+						
+						<div class="flex_row_inp">
+							<label>
+								Door Overlay
+							</label>
+							<div class="">
+								<input type="text" id="c_overlay" class="number_req form-control c_overlay" name="c_overlay" value="Door overlay"/>
+							</div>	
+						</div>
+						
+						<div class="flex_row_inp">
+							<label>
+								Box Construction
+							</label>
+							<div class="">
+								<input type="text" id="c_box_construction" class="number_req form-control c_box_construction" name="c_box_construction" value="c_box_construction"/>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-sm-6 flex_col basis_50">
+						<div class="flex_row_inp">
+							<label>
+								Drawerbox
+							</label>
+							<div class="">
+								<input type="text" id="c_drawer_box" class="number_req form-control c_drawer_box" name="c_drawer_box" value="c_drawer_box"/>
+							</div>
+						</div>
+						
+						<div class="flex_row_inp">
+							<label>
+								Box Style
+							</label>
+							<div class="">
+								<input type="text" id="c_box_style" class="number_req form-control c_box_style" name="c_box_style" value="c_box_style"/>
+							</div>
+						</div>
+						
+						<div class="flex_row_inp">
+							<label>
+								Hardware
+							</label>
+							<div class="">
+								<input type="text" id="c_hardware" class="number_req form-control c_hardware" name="c_hardware" value="c_hardware"/>
+							</div>
+						</div>
+						
+						<div class="flex_row_inp">
+							<label>
+								Crown Molding
+							</label>
+							<div class="">
+								<input type="text" id="c_crown_molding" class="number_req form-control c_crown_molding" name="c_crown_molding" value="c_crown_molding"/>
+							</div>
+						</div>
+						
+						<div class="flex_row_inp">
+							<label>
+								Undercabinet Lightning
+							</label>
+							<div class="">
+								<input type="text" id="c_under_cab_light" class="number_req form-control c_under_cab_light" name="c_under_cab_light" value="c_under_cab_light"/>
+							</div>	
+						</div>
+						
+						<div class="flex_row_inp">
+							<label>
+								Countertop
+							</label>
+							<div class="">
+								<input type="text" id="c_countertop" class="number_req form-control c_countertop" name="c_countertop" value="c_countertop"/>
+							</div>	
+						</div>
+					</div>
+				</div>	
+				
+				
+				
+				
+				
+				<br/>
+				
+				
+				<div class="row input_field">
+					<div class="col-sm-12">
+						<h2 class="text-left inline_block">Payment Schedule</h2>
+					</div>
+					
+					<div class="col-sm-6 flex_col basis_42">
+						
+						
+						<div class="flex_row_inp">
+							<label>
+								Cabinetry
+							</label>
+							<div class="input_field_n_dollar">
+								<span class="dollar_sign"> $ </span>
+								<input type="text" id="c_price" class="number_req form-control c_price price_input_sum" name ="c_price" value="5000"/>
+							</div>
+						</div>
+						
+						<div class="flex_row_inp">
+							<label>
+								Counter Top
+							</label>
+							<div class="input_field_n_dollar">
+								<span class="dollar_sign"> $ </span>
+								<input type="text" id="counter_top" class="number_req form-control counter_top price_input_sum" name="counter_top" value="700"/>
+							</div>
+						</div>
+						
+						<div class="flex_row_inp">
+							<label>
+								Installation
+							</label>
+							<div class="input_field_n_dollar">
+								<span class="dollar_sign"> $ </span>
+								<input type="text" id="installation" class="number_req form-control installation price_input_sum" name ="installation" value="500"/>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-sm-6 flex_col basis_42">
+						<div class="flex_row_inp">
+							<label>
+								Pulls and Knobs
+							</label>
+							<div class="input_field_n_dollar">
+								<span class="dollar_sign"> $ </span>
+								<input type="text" id="pulls_knobs" class="number_req form-control pulls_knobs price_input_sum" name="pulls_knobs" value="600"/>
+							</div>	
+						</div>
+						
+						<div class="flex_row_inp">
+							<label>
+								Delivery
+							</label>
+							<div class="input_field_n_dollar">
+								<span class="dollar_sign"> $ </span>
+								<input type="text" id="delivery" class="number_req form-control delivery price_input_sum" name ="delivery" value="300"/>
+							</div>	
+						</div>
+						
+						<div class="flex_row_inp">
+							<label>
+								Sales Tax
+							</label>
+							<div class="">
+								<select id="sales_tax" name ="sales_tax" required="required" class="">
+									<option name="ny" value="8.375"> NY </option>
+									<option name="outside_ny" value="0"> Outside NY </option>
+								</select>
+							</div>		
+						</div>
+						
+						<div class="flex_row_inp">
+							<label>
+								Retainer Paid
+							</label>
+							<div class="input_field_n_dollar">
+								<span class="dollar_sign"> $ </span>
+								<input type="text" id="retainer_paid" class="number_req form-control retainer_paid" name ="retainer_paid" value="400"/>
+							</div>
+						</div>
+						
+						
+					</div>
+				</div>	
+				
+				<div class="row input_field ">
+					<div class="col-sm-6">
+						<div class="flex_row_inp">
+							<label class="red font_h2">
+								Lead Time (weeks)
+							</label>
+							<div class="">
+								<input type="text" id="lead_time" class="number_req form-control lead_time lead_time_input" name="lead_time" value="" required/>
+							</div>	
+						</div>
+					</div>
+				</div>	
+
+
+				<!--
+				
+				<div class="row input_field">
+					<div class="col-sm-12">
+						<h2>Total Due</h2>
+					</div>
+					<div class="col-sm-12">
+						<div class="">
+							<input type="text" id="totalDue" class="number_req form-control totalDue" name ="totalDue" value="" disabled="disabled"/>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row input_field">
+					
+					
+					<div class="col-sm-6">
+						<label>
+							Date
+						</label>
+						<div class="">
+							<input type="text" id="retainer_paid_date" class="number_req form-control retainer_paid_date date_picker_input" name ="retainer_paid_date" value=""/>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row input_field">
+					
+					<div class="col-sm-6">
+						<label>
+							50% due
+						</label>
+						<div class="">
+							<input type="text" id="fifty_due_1" class="number_req form-control fifty_due_1" name ="fifty_due_1" value="" disabled="disabled"/>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<label>
+							Date
+						</label>
+						<div class="">
+							<input type="text" id="fifty_due_1_date" class="number_req form-control fifty_due_1_date date_picker_input" name ="fifty_due_1_date" value="" />
+						</div>
+					</div>
+				</div>
+				
+				<div class="row input_field">
+					
+					<div class="col-sm-6">
+						<label>
+							50% or remaining balance due
+						</label>
+						<div class="">
+							<input type="text" id="fifty_remaining_1" class="number_req form-control fifty_remaining_1" name ="fifty_remaining_1" value="" disabled="disabled"/>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<label>
+							Date
+						</label>
+						<div class="">
+							<input type="text" id="fifty_remaining_1_date" class="number_req form-control fifty_remaining_1_date date_picker_input" name ="fifty_remaining_1_date" value=""/>
+						</div>
+					</div>
+				</div>
+				
+				
+				
+				-->
+				
+				<div class="row input_field text-right">
+					
+					<div class="col-sm-6">
+						<span> </span>
+					</div>
+					<div class="col-sm-6">
+						<div class="">
+							<input type="submit" id="price_calc_btn" type="button" class="btn btn-primary" value="Generate Contract">
+						</div>
+					</div>
+				</div>
+			
+			</form>	
+		</div>
+	</div>
+	
+	
+	<div id="editor">
+	
+		<style> 
+
+			#editor{
+				font-family: 'Ysabeau-VariableFont_wght' , 'Mont', sans-serif;
+				font-size:14px;
+			}
+			#logo_print{	
+				display:inline-block;
+				width:80px;
+			}
+			.width_logo{
+				width:90px;
+			}
+			#serial_num{
+				font-size:14px;
+				vertical-align:middle;
+				display:inline-block;
+			}
+			#editor h2{
+				text-align:center;
+				font-size:22px;
+				border-top:1px solid #a6a6a6;
+				border-bottom:1px solid #a6a6a6;
+			}
+			.text-bold{
+				text-align:bold;
+			}
+			.text-right{
+				text-align:right;
+			}
+			.text-left{
+				text-align:left;
+			}
+			.underline{
+				text-decoration:underline;
+			}
+			.font_h2{
+				font-size:22px;
+			}
+			.font_h3{
+				font-size:18px;
+			}
+			.color_red{
+				color:red;
+			}
+			th{
+				padding: 5px!important;
+			}
+			#editor ul li{
+				padding:2px 2px;
+				font-size:14px;
+				list-style-type:none;
+			}
+			#editor .text-bold{
+				font-weight:bold;
+			}
+			#editor .text-center{
+				text-align:center;
+			}
+			#editor .text-right{
+				text-align:right;
+			}
+			#editor .text-left{
+				text-align:left;
+			}
+			#editor table,tr , th , td  {  
+				font-family: 'Mont', sans-serif;
+				border-collapse: collapse;  
+				
+			}  
+			.table_w_100{
+				width: 100%;  
+			}
+			#editor td, #editor th {  
+				text-align: left;  
+				padding: 2px;  
+				font-size:14px;
+				vertical-align:middle;
+				width: 48%;
+			}  
+			#editor .img_td, #editor .img_td td{
+				border:0;
+			}
+			.thead-dark{
+				color:#231f20;
+				font-size:14px;
+				font-weight:bold;
+				text-align:center;
+			}
+			.table_print_pdf{
+				border: 1px solid #a6a6a6;
+			}
+			
+			.bck_red{
+				background:#eb2227;
+			}
+			.bck_grey{
+				background-color:#ededee;
+			}
+
+			.border-table{
+				border-collapse:collapse;
+			}
+			.border-table td{
+				border:1px solid #a6a6a6;;
+			}
+			.pad_td_10{
+				padding: 1px 0 1px;
+			}
+			.grey_highlight{
+				background:#ededee;
+			}
+			p{
+				color:#231f20;
+			}
+			.solid_line{
+				padding-bottom:5px;
+				margin-bottom:5px;
+				border-bottom:1px solid #a6a6a6 !important; 
+				border-width:1px !important;
+			}
+			.ml-auto{
+				margin-left:auto;
+			}
+			
+			#editor span ,#editor  p ,#editor  td ,#editor  li {
+				color : #231f20;
+			}
+			#editor h1,h2,h3,.font_h2,.font_h3,.heading{
+				font-family: 'Bebas Neue' , 'Mont', sans-serif !important;
+				letter-spacing :1px;
+				color: #ee1c25 !important;
+			}
+			#editor .w_100{
+				width:100%;
+			}
+			.line_b{
+				color: #ececec !important;
+				padding:0 !important;
+				margin:0 !important;
+				font-size:12px !important;
+			}
+			
+			.btm_border{
+				border-bottom : 1px solid #ececec;
+			}
+			td hr{
+				margin: 0 !important;
+			}
+			.zero_m_p{
+				margin: 0 !important;
+				padding:0 !importamt;
+			}
+			.w-45{
+				margin-right:20px;
+			}
+			
+			.w-45 tr td{
+				width:46% !important;
+				
+			}
+			th{
+				padding: 5px!important;
+			}
+			.h_cstm{
+				height : 32px;
+			}
+		</style> 
+		
+			
+		<!-- don't delete this -->
+		<table class="img_td table_print_1 table_print_pdf" id="table_print_1">
+			<tbody>
+			
+				<table class="table_w_100">
+					<tbody>
+						<tr class="img_td">
+							
+							<td>
+								<span class="text-bold font_h2">Proposal</span>
+								<br/> <span id="pdf_main_date">Date</span>
+							</td>
+							<td class="text-right">
+								<table class="ml-auto text-right"><tr>
+									<td class="text-right w_100"> 575 CHESTNUT RIDGE RD, <br/> SPRING VALLEY NY <br/> 845-426-1400 </td>
+									<td class="text-left width_logo"><img src="images/logo.png" alt="logo" id="logo_print" class=""> </td>
+								<tr></table>
+							</td>
+							
+						</tr>
+						<tr class="w_100 zero_m_p">
+							<td class="w_100 line_b" colspan="2"><span class="line_b"><hr/></span></td>
+						</tr>
+					</tbody>
+				</table>
+
+				<br/>
+				<table class="table_w_100">
+					<tbody>
+						<tr class="">
+							<td class="text-left" colspan="2">
+								<span class="text-bold font_h3">PROJECT DETAILS</span>
+							</td>
+						</tr>
+						<tr class="w_100 zero_m_p btm_border">
+								<td class="w_100 line_b" colspan="2"></td>
+							</tr>
+										
+						<tr class="">
+							
+							<td>
+								<table>
+									<tr>	<td colspan="2"> <span id="pdf_b_name_1"></span> </td> </tr>
+									<tr>	<td colspan="2"> <span id="pdf_b_address_1"> </span> </td> </tr>
+									<tr>	<td colspan="2"> <span id="pdf_b_address_2"></span> </td> </tr>
+								</table>
+							</td>
+							
+							<td >
+								<table class="ml-auto">
+									<tr>	<td class="">Delivery Contact : </td><td> <span id="pdf_delivery_contact"></span> </td> </tr>
+									<tr>	<td class=""> Project Email : </td><td> <span id="pdf_project_email"></span> </td> </tr>
+									<tr>	<td class=""> Kitchen Designer : </td><td> <span id="pdf_kitchen_designer"> </span> </td> </tr>
+								</table>
+							</td>
+							<!--
+							<td class="text-right">
+								<span id="pdf_b_phone_1">Phone #</span>
+								<br/><span id="pdf_project_email">Project Email</span>
+								<br/><span id="pdf_kitchen_designer">Kitchen Designer </span>
+							</td>
+							-->
+						</tr>
+						
+					</tbody>
+				</table>
+				
+				
+				<br/>
+				<table class="table_w_100">
+					<tbody>
+						<tr>
+							<td class="text-left" colspan="2">
+								<span class="text-bold font_h3">SPECIFICATIONS</span>
+							</td>
+						</tr>
+						
+					
+							<tr class="w_100 zero_m_p btm_border">
+								<td class="w_100 line_b" colspan="2"></td>
+							</tr>
+
+						<tr class="">
+							
+							<td>
+								<table>
+									<tr>	<td> Manufacturer : </td><td> <span id="pdf_c_vendor"> </span> </td> </tr>
+									<tr>	<td> Door Style : </td><td> <span id="pdf_c_doorstyle">  </span> </td> </tr>
+									<tr>	<td> Door Finish : </td><td> <span id="pdf_c_finish"> </span> </td> </tr>
+									<tr>	<td> Door Species : </td><td> <span id="pdf_c_species"> </span> </td> </tr>
+									<tr>	<td> Door Overlay : </td><td> <span id="pdf_c_overlay"> </span> </td> </tr>
+									<tr>	<td> Box Construction : </td><td> <span id="pdf_c_box_construction"> </span> </td> </tr>
+								</table>
+							</td>
+							
+							<td>
+								<table class="">
+									<tr>	<td class="">Box Style : </td><td> <span id="pdf_c_box_style"> </span> </td> </tr>
+									<tr>	<td class=""> Drawerbox : </td><td> <span id="pdf_c_drawer_box"> </span> </td> </tr>
+									<tr>	<td class=""> Hardware : </td><td> <span id="pdf_c_hardware"> </span> </td> </tr>
+									<tr>	<td class=""> Crown Molding : </td><td> <span id="pdf_c_crown_molding"> </span> </td> </tr>
+									<tr>	<td class=""> Undercabinet Lightning : </td><td> <span id="pdf_c_under_cab_light"> </span> </td> </tr>
+									<tr>	<td class=""> Countertop : </td><td> <span id="pdf_c_countertop"> </span> </td> </tr>
+								</table>
+							</td>
+							<!--
+							<td class="text-right">
+								<span id="pdf_b_phone_1">Phone #</span>
+								<br/><span id="pdf_project_email">Project Email</span>
+								<br/><span id="pdf_kitchen_designer">Kitchen Designer </span>
+							</td>
+							-->
+						</tr>
+					</tbody>
+				</table>
+		<br/>
+					<table class="table_w_100">
+					<tbody>
+						
+							
+							<tr class="">
+								<td class="text-left" colspan="2">
+									<span class="text-bold font_h3">PAYMENT SCHEDULE</span>
+								</td>
+							</tr>
+							
+							<tr class="w_100 zero_m_p btm_border">
+								<td class="w_100 line_b" colspan="2"></td>
+							</tr>
+						
+						<tr class="">
+							<td >
+								<table class="border-table table_w_100 w-45">
+									<tr class="h_cstm">
+										<td class="text-bold grey_highlight">
+											Total Due
+										</td>
+										<td id="pdf_totalDue" class="text-bold grey_highlight">
+											$-- 
+										</td>
+									</tr>
+									
+									<tr>
+										<td>
+											Retainer
+										</td>
+										<td id="pdf_retainer_paid">
+											$--
+										</td>
+									</tr>
+									
+									<tr rowspan="2" class="space-tb-2">
+										<td>
+											50% due upon <br/> signing proposal
+										</td>
+										<td id="pdf_fifty_due_1">
+											$--
+										</td>
+									</tr>
+									
+									<tr rowspan="2" class="space-tb-2">
+										<td>
+											50% or remaining balance <br/> due prior to delivery
+										</td>
+										<td id="pdf_fifty_remaining_1">
+											$--
+										</td>
+									</tr>
+									
+									
+								</table>
+							</td>
+							
+							
+							<td >
+								<table class="border-table table_w_100 w-45">
+									<tr>
+										<td>
+											Cabinetry
+										</td>
+										<td id="pdf_c_price">
+											$--
+										</td>
+									</tr>
+									<tr>
+										<td>
+											Counter Top
+										</td>
+										<td id="pdf_counter_top">
+											$--
+										</td>
+									</tr>
+									<tr>
+										<td>
+											Installation
+										</td>
+										<td id="pdf_installation">
+											$--
+										</td>
+									</tr>
+									<tr>
+										<td>
+											Pulls & Knobs
+										</td>
+										<td id="pdf_pulls_knobs">
+											$--
+										</td>
+									</tr>
+									
+									
+									<tr>
+										<td>
+											Delivery
+										</td>
+										<td id="pdf_delivery">
+											Included
+										</td>
+									</tr>
+									
+									<tr>
+										<td>
+											Sales Tax
+										</td>
+										<td id="pdf_sales_tax">
+											$--
+										</td>
+									</tr>
+									
+								</table>
+							</td>
+							
+						</tr>
+					</tbody>
+				</table>
+				
+				<h3 class="text-bold text-center"><span class="font_h3">Terms and Conditions</span></h3>
+				<ol>
+					<li>In the provision of providing and delivering the services and/or products to the Client, UPGRADE shall
+					always be a dealer, but not the manufacturer.</li>
+					<li>The estimated time of arrival of the Cabinetry shall be <span> <span id="pdf_lead_time" class="underline"></span> </span> weeks from the date of signing this
+					agreement.</li>
+					<li>UPGRADE may not be held liable for any conflicts, delays, or rescheduling due to the manufacturer’s fault.</li>
+					<li>The exact delivery/ installation date will be provided before 1-2 weeks by the project coordinator.</li>
+					<li>In the event delivery cannot be accepted by the Client due to any reason, the cabinetrywill be transferred
+					to a storage facility and will incur applicable charges per month (for storage + re-delivery).</li>
+					<li>Full payment shall be due upon completion of the cabinetry at the factory and scheduling of the delivery;
+					irrespective of delays or storage procedures.</li>
+					<li>The installation is performed by independent installation companies, for which UPGRADE may not be held
+					liable - including their schedule of work.</li>
+					<li>All wood species are a product of nature in which variations in color, grain pattern, textures, and density
+					are unique. Due to the natural grain properties inherent in all wood species, these natural variations are
+					not considered defects.</li>
+					<li>A physical sample of each finish/color was approved prior to signing this document and is noted in the
+					above chart. Upgrade is not responsible for any selections not approved in person.</li>
+					<li>By signing this document, I agree to the aforementioned terms;and the attached floor plan.</li>
+				</ol>
+				<br/>
+				<table class="bck_grey red_line pad_td_10 table_w_100" style={background-color:#ccc;}>
+					<tr class=""> <td class="text-left">Signature ___________________________</td> 
+					<td class="text-right"> Date : _ _ / _ _ / _ _   &nbsp; &nbsp;&nbsp;&nbsp;</td>  </tr>
+				</table>
+				
+		
+			</tbody>
+		</table>
+	
+	
+	
+	</div>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/print.min.js"></script>
+	<script src="js/jquery_validate.js"></script>		
+	<script src="js/calc_main.js"></script>
+	<script type= "text/javascript" src= "./js/bootstrap-datepicker.min.js"></script> 	 
+	<script>
+		$(document).ready(function(){
+			// var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+			 var date = new Date();
+  var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+			jQuery(".date_picker_input").datepicker({
+			   format: 'D, dd M yyyy',
+				startDate: today,
+			});
+			jQuery(".date_picker_input").datepicker('setDate', today);
+			/*
+				$('#cmd').click(function () {   
+					printJS('editor', 'html');								
+				});	
+			*/			
+		});	
+	 </script>
+	 
+	<!-- <script src="js/address1.js"></script> 
+	 
+	<script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initAutocomplete&libraries=places&v=weekly"
+      defer
+    ></script>
+	
+        -->
+
+</body>
+</html>
