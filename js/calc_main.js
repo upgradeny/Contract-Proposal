@@ -188,7 +188,7 @@ $(document).ready(function(){
 				var pulls_knobs = Number( jQuery('#pulls_knobs').val() );
 				
 				
-				sales_tax = round_2_digits( (c_price + counter_top ) * sales_tax_inp );
+				sales_tax = round_2_digits( (c_price + counter_top + pulls_knobs ) * sales_tax_inp );
 				
 				var totalDue = round_2_digits ( c_price + sales_tax + delivery + installation + counter_top + pulls_knobs );
 				
