@@ -178,7 +178,21 @@
 								Manufacturer : 
 							</label>
 							<div class="">
-								<input type="text" id="c_vendor" class="number_req form-control c_vendor" name ="c_vendor" value="vendor name"/>
+								
+								<input type="text" id="c_vendor" list="manufacturer" class="number_req form-control c_vendor" name ="c_vendor" value="vendor name"/>
+								<datalist id="manufacturer">
+									<option>Cubitac Cabinetry</option>
+									<option>Fabuwood Cabinetry</option>
+									<option>CNC Cabinetry</option>
+									<option>Semi-Custom Cabinetry</option>
+									<option>Custom Cabinetry</option>
+									<option>DC Cabinetry</option>
+									<option>Executive Cabinetry</option>
+									<option>TeddWood Cabinetry</option>
+									<option>Luxor Cabinetry</option>
+									<option>Bernier Cabinetry</option>
+									<option>Hans Krug Cabinetry</option>
+								</datalist>
 							</div>	
 						</div>
 						<div class="flex_row_inp">
@@ -187,6 +201,8 @@
 							</label>
 							<div class="">
 								<input type="text" id="c_doorstyle" class="number_req form-control c_doorstyle" name ="c_doorstyle" value="door input"/>
+								
+								
 							</div>	
 						</div>
 						<div class="flex_row_inp">
@@ -194,7 +210,17 @@
 								Door Species
 							</label>
 							<div class="">
-								<input type="text" id="c_species" class="number_req form-control c_species" name="c_species" value="notes input"/>
+								<input type="text" id="c_species" list="list_door_species" class="number_req form-control c_species" name="c_species" value="notes input"/>
+								
+								<datalist id="list_door_species">
+									<option>MDF</option>
+									<option>Maple</option>
+									<option>Oak</option>
+									<option>Walnut</option>
+									<option>Cherry</option>
+									<option>Alder</option>
+								</datalist>
+								
 							</div>
 						</div>
 						
@@ -212,7 +238,13 @@
 								Door Overlay
 							</label>
 							<div class="">
-								<input type="text" id="c_overlay" class="number_req form-control c_overlay" name="c_overlay" value="Door overlay"/>
+								<input type="text" id="c_overlay" list="list_door_overlay" class="number_req form-control c_overlay" name="c_overlay" value="Door overlay"/>
+									<datalist id="list_door_overlay">
+										<option>Full Overlay</option>
+										<option>Partial Overlay</option>
+										<option>Inset Overlay</option>
+									</datalist>
+								
 							</div>	
 						</div>
 						
@@ -221,7 +253,13 @@
 								Box Construction
 							</label>
 							<div class="">
-								<input type="text" id="c_box_construction" class="number_req form-control c_box_construction" name="c_box_construction" value="c_box_construction"/>
+								<input type="text" id="c_box_construction" list="list_box_construction" class="number_req form-control c_box_construction" name="c_box_construction" value="c_box_construction"/>
+									<datalist id="list_box_construction">
+											<option>3/4" Plywood</option>
+											<option>5/8" Plywood</option>
+											<option>Particle Board</option>
+											<option>HDF</option>
+									</datalist>
 							</div>
 						</div>
 					</div>
@@ -232,7 +270,14 @@
 								Drawerbox
 							</label>
 							<div class="">
-								<input type="text" id="c_drawer_box" class="number_req form-control c_drawer_box" name="c_drawer_box" value="c_drawer_box"/>
+								<input type="text" id="c_drawer_box" list="list_drawerbox" class="number_req form-control c_drawer_box" name="c_drawer_box" value="c_drawer_box"/>
+								<datalist id="list_drawerbox">
+									<option>Dovetail</option>
+									<option>Grey Metal</option>
+									<option>White Metal</option>
+									<option>Plywood (matching box)</option>
+								</datalist>
+
 							</div>
 						</div>
 						
@@ -241,7 +286,11 @@
 								Box Style
 							</label>
 							<div class="">
-								<input type="text" id="c_box_style" class="number_req form-control c_box_style" name="c_box_style" value="c_box_style"/>
+								<input type="text" id="c_box_style" list="list_box_style" class="number_req form-control c_box_style" name="c_box_style" value="c_box_style"/>
+								<datalist id="list_box_style">
+									<option>Framed</option>
+									<option>Frameless</option>
+								</datalist>
 							</div>
 						</div>
 						
@@ -250,7 +299,11 @@
 								Hardware
 							</label>
 							<div class="">
-								<input type="text" id="c_hardware" class="number_req form-control c_hardware" name="c_hardware" value="c_hardware"/>
+								<input type="text" id="c_hardware" list="list_hardware" class="number_req form-control c_hardware" name="c_hardware" value="c_hardware"/>
+								<datalist id="list_hardware">
+									<option>Soft-Close</option>
+									<option>Partial Extension</option>
+								</datalist>
 							</div>
 						</div>
 						
