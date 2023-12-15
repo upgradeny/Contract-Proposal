@@ -61,7 +61,7 @@
 								Client Name
 							</label>
 							<div class="">
-								<input type="text" id="b_name_1" class="number_req form-control b_name_1" name ="b_name_1" value="bill to name"/>
+								<input type="text" id="b_name_1" class="number_req form-control b_name_1" name ="b_name_1" value="Hershy Fischer"/>
 							</div>
 						</div>
 						<div class="flex_row_inp">
@@ -69,7 +69,7 @@
 								Delivery Address
 							</label>
 							<div class="">
-								<input type="text" id="b_address_1" class="number_req form-control b_address_1 address_class" name ="b_address_1" value="address input 1"/>
+								<input type="text" id="b_address_1" class="number_req form-control b_address_1 address_class" name ="b_address_1" value="21 Overbrook Dr"/>
 							</div>
 						</div>
 						<div class="flex_row_inp">
@@ -77,7 +77,7 @@
 								Delivery Address 2
 							</label>
 							<div class="">
-								<input type="text" id="b_address_2" class="number_req form-control b_address_2 address_data_2" name ="b_address_2" value="address input 2"/>
+								<input type="text" id="b_address_2" class="number_req form-control b_address_2 address_data_2" name ="b_address_2" value="Monsey NY 10952"/>
 							</div>
 						</div>
 						<!--
@@ -528,450 +528,344 @@
 			</form>	
 		</div>
 	</div>
-	
+
 	
 	<div id="editor">
-	
-		<style> 
+	<style>
 
-			#editor{
-				font-family: 'Ysabeau-VariableFont_wght' , 'Mont', sans-serif;
-				font-size:14px;
-			}
-			#logo_print{	
-				display:inline-block;
-				width:80px;
-			}
-			.width_logo{
-				width:90px;
-			}
-			#serial_num{
-				font-size:14px;
-				vertical-align:middle;
-				display:inline-block;
-			}
-			#editor h2{
-				text-align:center;
-				font-size:22px;
-				border-top:1px solid #a6a6a6;
-				border-bottom:1px solid #a6a6a6;
-			}
-			.text-bold{
-				text-align:bold;
-			}
-			.text-right{
-				text-align:right;
-			}
-			.text-left{
-				text-align:left;
-			}
-			.underline{
-				text-decoration:underline;
-			}
-			.font_h2{
-				font-size:22px;
-			}
-			.font_h3{
-				font-size:18px;
-			}
-			.color_red{
-				color:red;
-			}
-			th{
-				padding: 5px!important;
-			}
-			#editor ul li{
-				padding:2px 2px;
-				font-size:14px;
-				list-style-type:none;
-			}
-			#editor .text-bold{
-				font-weight:bold;
-			}
-			#editor .text-center{
-				text-align:center;
-			}
-			#editor .text-right{
-				text-align:right;
-			}
-			#editor .text-left{
-				text-align:left;
-			}
-			#editor table,tr , th , td  {  
-				font-family: 'Mont', sans-serif;
-				border-collapse: collapse;  
-				
-			}  
-			.table_w_100{
-				width: 100%;  
-			}
-			#editor td, #editor th {  
-				text-align: left;  
-				padding: 2px;  
-				font-size:14px;
-				vertical-align:middle;
-				width: 48%;
-			}  
-			#editor .img_td, #editor .img_td td{
-				border:0;
-			}
-			.thead-dark{
-				color:#231f20;
-				font-size:14px;
-				font-weight:bold;
-				text-align:center;
-			}
-			.table_print_pdf{
-				border: 1px solid #a6a6a6;
+			@media print {
+				@page {
+					size: 2525px 3300px;
+					margin: 0;
+				}
 			}
 			
-			.bck_red{
-				background:#eb2227;
-			}
-			.bck_grey{
-				background-color:#ededee;
+			@font-face {
+			  font-family: 'Montserrat'; 
+			  src: url('fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+			  font-style: normal;
+			  font-weight: normal;
 			}
 
-			.border-table{
-				border-collapse:collapse;
-			}
-			.border-table td{
-				border:1px solid #a6a6a6;;
-			}
-			.pad_td_10{
-				padding: 1px 0 1px;
-			}
-			.grey_highlight{
-				background:#ededee;
-			}
-			p{
-				color:#231f20;
-			}
-			.solid_line{
-				padding-bottom:5px;
-				margin-bottom:5px;
-				border-bottom:1px solid #a6a6a6 !important; 
-				border-width:1px !important;
-			}
-			.ml-auto{
-				margin-left:auto;
+			@font-face {
+			  font-family: 'Montserrat-Italic'; 
+			  src: url('fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+			  font-style: normal;
+			  font-weight: normal;
 			}
 			
-			#editor span ,#editor  p ,#editor  td ,#editor  li {
-				color : #231f20;
-			}
-			#editor h1,h2,h3,.font_h2,.font_h3,.heading{
-				font-family: 'Bebas Neue' , 'Mont', sans-serif !important;
-				letter-spacing :1px;
-				color: #ee1c25 !important;
-			}
-			#editor .w_100{
-				width:100%;
-			}
-			.line_b{
-				color: #ececec !important;
-				padding:0 !important;
-				margin:0 !important;
-				font-size:12px !important;
-			}
+			#editor1{
 			
-			.btm_border{
-				border-bottom : 1px solid #ececec;
+				font-family: 'Montserrat' !important;
+				display:flex;
+				flex-direction: column;
+				gap: 25px;
 			}
-			td hr{
-				margin: 0 !important;
-			}
-			.zero_m_p{
-				margin: 0 !important;
-				padding:0 !importamt;
-			}
-			.w-45{
-				margin-right:20px;
-			}
-			
-			.w-45 tr td{
-				width:46% !important;
-				
-			}
-			th{
-				padding: 5px!important;
-			}
-			.h_cstm{
-				height : 32px;
-			}
-		</style> 
+		.full_width{
+			width:100%;
+			padding:0;
+			margin:0;
+		}
+		.bck_light_grey{
+			background:#f7f7f7;
+			padding:20px;
+		}
 		
+		.width_logo , #logo_print{
+				width:161px;
+			}
 			
-		<!-- don't delete this -->
-		<table class="img_td table_print_1 table_print_pdf" id="table_print_1">
-			<tbody>
-			
-				<table class="table_w_100">
-					<tbody>
-						<tr class="img_td">
-							
-							<td>
-								<span class="text-bold font_h2">Proposal</span>
-								<br/> <span id="pdf_main_date">Date</span>
-							</td>
-							<td class="text-right">
-								<table class="ml-auto text-right"><tr>
-									<td class="text-right w_100"> 575 CHESTNUT RIDGE RD, <br/> SPRING VALLEY NY <br/> 845-426-1400 </td>
-									<td class="text-left width_logo"><img src="images/logo.png" alt="logo" id="logo_print" class=""> </td>
-								<tr></table>
-							</td>
-							
-						</tr>
-						<tr class="w_100 zero_m_p">
-							<td class="w_100 line_b" colspan="2"><span class="line_b"><hr/></span></td>
-						</tr>
-					</tbody>
-				</table>
+			h1{
+				font-family: 'Montserrat' !important;
+				font-size: 64px;
+				font-weight: 700;
+				line-height: 78px;
+				letter-spacing: 0em;
+				text-align: left;
+				color:#000;
+			}
+			h2{
+				font-family: 'Montserrat' !important;
+				font-size: 58px;
+				font-weight: 700;
+				line-height: 71px;
+				letter-spacing: 0em;
+				text-align: left;
 
-				<br/>
-				<table class="table_w_100">
-					<tbody>
-						<tr class="">
-							<td class="text-left" colspan="2">
-								<span class="text-bold font_h3">PROJECT DETAILS</span>
-							</td>
-						</tr>
-						<tr class="w_100 zero_m_p btm_border">
-								<td class="w_100 line_b" colspan="2"></td>
-							</tr>
-										
-						<tr class="">
-							
-							<td>
-								<table>
-									<tr>	<td colspan="2"> <span id="pdf_b_name_1"></span> </td> </tr>
-									<tr>	<td colspan="2"> <span id="pdf_b_address_1"> </span> </td> </tr>
-									<tr>	<td colspan="2"> <span id="pdf_b_address_2"></span> </td> </tr>
-								</table>
-							</td>
-							
-							<td >
-								<table class="ml-auto">
-									<tr>	<td class="">Delivery Contact : </td><td> <span id="pdf_delivery_contact"></span> </td> </tr>
-									<tr>	<td class=""> Project Email : </td><td> <span id="pdf_project_email"></span> </td> </tr>
-									<tr>	<td class=""> Kitchen Designer : </td><td> <span id="pdf_kitchen_designer"> </span> </td> </tr>
-								</table>
-							</td>
-							<!--
-							<td class="text-right">
-								<span id="pdf_b_phone_1">Phone #</span>
-								<br/><span id="pdf_project_email">Project Email</span>
-								<br/><span id="pdf_kitchen_designer">Kitchen Designer </span>
-							</td>
-							-->
-						</tr>
-						
-					</tbody>
-				</table>
+				color:#000;
+			}
+			
+			
+		#specs_div , .table_bck{
+			display: flex;
+			justify-content: space-between;
+			padding: 10px;
+		}
+		.top_25{}
+		.flex{
+			display:flex;
+		}
+		#head{
+			display:flex;
+			justify-content: space-between;
+			align-items: center;
+			margin:100px 130px; 
+		}
+		#head .contact_details{
+			font-size: 28px;
+			font-weight: 400;
+			line-height: 36px;
+			letter-spacing: 0em;
+			text-align: right;
+			color:#000;
+			padding-right:15px;
+		}
+		#project_details .row{
+			display:flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		#project_details .row .left_sec{
+			font-size: 33px;
+			font-weight: 500;
+			line-height: 51px;
+			letter-spacing: 0em;
+			text-align: left;
+
+		}
+		#project_details .row .right_sec{		
+			font-size: 33px;
+			font-weight: 400;
+			line-height: 40px;
+			letter-spacing: 0em;
+			text-align: left;
+			color: #565656;
+			margin-right:auto;
+		}
+		#project_details .row .right_sec span{		
+			font-size: 33px;
+			font-weight: 600;
+			line-height: 40px;
+			letter-spacing: 0em;
+			text-align: left;
+			color: #000;
+		}
+		#project_details .input_value{
+			font-size: 33px;
+			font-weight: 600;
+			line-height: 40px;
+			letter-spacing: 0em;
+			text-align: left;
+			color:#000;
+		}
+		.v_center{
+			align-items: center;
+		}
+		 .flex_table{
+			flex-basis: 48%;
+			
+		}
+		.flex_basis_49{
+			flex-basis:50%;
+		}
+		.pad-r-10{
+			padding-right:10px;
+		}
+		.m-r-10{
+			margin-right:10px;
+		}
+		.table_bck{
+			background:#f7f7f7;
+			
+		}
+		.flex_table{
+			padding:15px 10px;
+		}
+		.flex_table div {
+			padding: 10px 10px 5px;
+			border-bottom: 1px solid #5656563B;
+			display:flex;
+			justify-content:space-between;
+		}
+		.flex_table div , .td_name{
+			font-size: 33px;
+			font-weight: 600;
+			line-height: 52px;
+			letter-spacing: 0em;
+			text-align: left;
+			color:#565656;
+		}
+		.flex_table div{
+			font-size: 33px;
+			font-weight: 400;
+			line-height: 52px;
+			letter-spacing: 0em;
+			text-align: left;
+			color:#565656;
+		}
+		.flex_table .td_value{
+			text-align:right !important;
+			font-size: 33px;
+			font-weight: 600;
+			line-height: 52px;
+			letter-spacing: 0em;
+			text-align: left;
+			color:#565656;
+		}
+		#terms_conditions ol li{
+			font-size: 33px;
+			font-weight: 400;
+			line-height: 52px;
+			letter-spacing: 0em;
+			text-align: left;
+			color:#565656;
+		}
+		.gap-10{
+			gap:10px;
+		}
+		
+		#main{
+			padding:0 130px;
+		}
+		#sign_date{
+			padding-top:40px;
+		}
+		#sign_date div{
+			display:flex;
+			justify-content:space-between;
+			font-size: 33px;
+			font-weight: 700;
+			line-height: 40px;
+			letter-spacing: 0em;
+			text-align: left;
+			color:#000;
+		}
+		.flex_table .red{
+			color:red !important;
+			font-size: 33px;
+			font-weight: 600;
+			line-height: 52px;
+			letter-spacing: 0em;
+		}
+		
+	</style>
+		<div id="editor1">
+			<div class="full_width bck_light_grey">
+				<div id="head">
+					<div class="flex">
+						<h1 class="">Proposal</h1>
+						<!--<br/> <span id="pdf_main_date">Date</span>-->
+					</div>
+					<div class="ml-auto flex">
+						<div class="flex text-right v_center m-r-10 gap-10">
+							<div class="text-right contact_details"> 575 CHESTNUT RIDGE RD, <br/> SPRING VALLEY NY <br/> 845-426-1400 </div>
+							<div class="text-left width_logo"><img src="images/logo.png" alt="logo" id="logo_print" class=""> </div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="main">
+				<div id="project_details">
+					<h2 class="">Project Details</h2>
+					<div class="flex row v_center">
+						<div class="left_sec flex_basis_49"> 
+							<span id="pdf_b_name_1">Hershy Fischer </span><br/> 
+							<span id="pdf_b_address_1">21 Overbrook Dr  </span> <br/> 
+							<span id="pdf_b_address_2">Monsey NY 10952  </span>
+						</div>
+						<div class="right_sec">
+							<div class=""> Delivery Contact :  <span id="pdf_delivery_contact" class="input_value"> </span> </div>
+							<div class=""> Kitchen Designer :  <span id="pdf_kitchen_designer" class="input_value"> </span> </div>
+						</div>
+						<!--<br/> <span id="pdf_main_date">Date</span>-->
+					</div>
+				</div>
 				
+				<div id="specs" class="table_container">
+					<h2>Specifications</h2>
+					<div id="specs_div" class="table_bck">
+						<div class="flex_table">
+								<div> Manufacturer :  <span id="pdf_c_vendor" class="td_value"> </span> 				</div>
+								<div> Door Style : <span id="pdf_c_doorstyle" class="td_value">  </span> 				</div>
+								<div> Door Finish :  <span id="pdf_c_finish" class="td_value"> </span> 					</div>
+								<div> Door Species : <span id="pdf_c_species" class="td_value"> </span> 				</div>
+								<div> Door Overlay :  <span id="pdf_c_overlay" class="td_value"> </span> 				</div>
+								<div> Box Construction :<span id="pdf_c_box_construction" class="td_value"> </span> 	</div>
+						</div>
+						<div class="flex_table">
+								
+								<div> Box Style : 			<span id="pdf_c_box_style" class="td_value"> </span>        </div>
+								<div> Drawerbox : 			<span id="pdf_c_drawer_box" class="td_value"> </span>       </div>
+								<div> Hardware : 			<span id="pdf_c_hardware" class="td_value"> </span>         </div>
+								<div> Crown Molding : 		<span id="pdf_c_crown_molding" class="td_value"> </span>    </div>
+								<div> Undercabinet Lightning <span id="pdf_c_under_cab_light" class="td_value"> </span> </div>
+								<div> Countertop : 			<span id="pdf_c_countertop" class="td_value"> </span>       </div>
+								
+						</div>
+					</div>
+				</div>
 				
-				<br/>
-				<table class="table_w_100">
-					<tbody>
-						<tr>
-							<td class="text-left" colspan="2">
-								<span class="text-bold font_h3">SPECIFICATIONS</span>
-							</td>
-						</tr>
-						
+				<div id="payment_sch" class="table_container">
+					<h2>Payment schedule</h2>
+					<div id="payment_sch_div" class="table_bck">
+						<div class="flex_table">
+								 					
+								<div> Cabinetry : <span id="pdf_c_price" class="td_value"> </span> 				</div>
+								<div> Installation :  <span id="pdf_installation" class="td_value"> </span> 				</div>							
+								<div> Counter Top :  <span id="pdf_counter_top" class="td_value"> </span> 				</div>
+								<div> Pulls & Knobs : <span id="pdf_pulls_knobs" class="td_value">  </span> 				</div>
+								<div class=""> Sales Tax :  <span id="pdf_sales_tax" class="td_value"> </span> 				</div>
+								
+						</div>
+						<div class="flex_table">
+								
+								
+								<div> Delivery : <span id="pdf_delivery" class="td_value"> Included </span> 					</div>
+								<div> Retainer :  <span id="pdf_retainer_paid" class="td_value"> $-- </span> 				</div>
+								<div> 50% due upon signing proposal : <span id="pdf_fifty_due_1" class="td_value">  </span> 				</div>
+								<div> 50% or remaining balance due prior to delivery :  <span id="pdf_fifty_remaining_1" class="td_value"> </span> </div>
+								<div class="red"> Total Due :  <span id="pdf_totalDue" class="td_value red"> $-- </span> 				</div>
 					
-							<tr class="w_100 zero_m_p btm_border">
-								<td class="w_100 line_b" colspan="2"></td>
-							</tr>
-
-						<tr class="">
-							
-							<td>
-								<table>
-									<tr>	<td> Manufacturer : </td><td> <span id="pdf_c_vendor"> </span> </td> </tr>
-									<tr>	<td> Door Style : </td><td> <span id="pdf_c_doorstyle">  </span> </td> </tr>
-									<tr>	<td> Door Finish : </td><td> <span id="pdf_c_finish"> </span> </td> </tr>
-									<tr>	<td> Door Species : </td><td> <span id="pdf_c_species"> </span> </td> </tr>
-									<tr>	<td> Door Overlay : </td><td> <span id="pdf_c_overlay"> </span> </td> </tr>
-									<tr>	<td> Box Construction : </td><td> <span id="pdf_c_box_construction"> </span> </td> </tr>
-								</table>
-							</td>
-							
-							<td>
-								<table class="">
-									<tr>	<td class="">Box Style : </td><td> <span id="pdf_c_box_style"> </span> </td> </tr>
-									<tr>	<td class=""> Drawerbox : </td><td> <span id="pdf_c_drawer_box"> </span> </td> </tr>
-									<tr>	<td class=""> Hardware : </td><td> <span id="pdf_c_hardware"> </span> </td> </tr>
-									<tr>	<td class=""> Crown Molding : </td><td> <span id="pdf_c_crown_molding"> </span> </td> </tr>
-									<tr>	<td class=""> Undercabinet Lightning : </td><td> <span id="pdf_c_under_cab_light"> </span> </td> </tr>
-									<tr>	<td class=""> Countertop : </td><td> <span id="pdf_c_countertop"> </span> </td> </tr>
-								</table>
-							</td>
-							<!--
-							<td class="text-right">
-								<span id="pdf_b_phone_1">Phone #</span>
-								<br/><span id="pdf_project_email">Project Email</span>
-								<br/><span id="pdf_kitchen_designer">Kitchen Designer </span>
-							</td>
-							-->
-						</tr>
-					</tbody>
-				</table>
-		<br/>
-					<table class="table_w_100">
-					<tbody>
-						
-							
-							<tr class="">
-								<td class="text-left" colspan="2">
-									<span class="text-bold font_h3">PAYMENT SCHEDULE</span>
-								</td>
-							</tr>
-							
-							<tr class="w_100 zero_m_p btm_border">
-								<td class="w_100 line_b" colspan="2"></td>
-							</tr>
-						
-						<tr class="">
-							<td >
-								<table class="border-table table_w_100 w-45">
-									<tr class="h_cstm">
-										<td class="text-bold grey_highlight">
-											Total Due
-										</td>
-										<td id="pdf_totalDue" class="text-bold grey_highlight">
-											$-- 
-										</td>
-									</tr>
-									
-									<tr>
-										<td>
-											Retainer
-										</td>
-										<td id="pdf_retainer_paid">
-											$--
-										</td>
-									</tr>
-									
-									<tr rowspan="2" class="space-tb-2">
-										<td>
-											50% due upon <br/> signing proposal
-										</td>
-										<td id="pdf_fifty_due_1">
-											$--
-										</td>
-									</tr>
-									
-									<tr rowspan="2" class="space-tb-2">
-										<td>
-											50% or remaining balance <br/> due prior to delivery
-										</td>
-										<td id="pdf_fifty_remaining_1">
-											$--
-										</td>
-									</tr>
-									
-									
-								</table>
-							</td>
-							
-							
-							<td >
-								<table class="border-table table_w_100 w-45">
-									<tr>
-										<td>
-											Cabinetry
-										</td>
-										<td id="pdf_c_price">
-											$--
-										</td>
-									</tr>
-									<tr>
-										<td>
-											Counter Top
-										</td>
-										<td id="pdf_counter_top">
-											$--
-										</td>
-									</tr>
-									<tr>
-										<td>
-											Installation
-										</td>
-										<td id="pdf_installation">
-											$--
-										</td>
-									</tr>
-									<tr>
-										<td>
-											Pulls & Knobs
-										</td>
-										<td id="pdf_pulls_knobs">
-											$--
-										</td>
-									</tr>
-									
-									
-									<tr>
-										<td>
-											Delivery
-										</td>
-										<td id="pdf_delivery">
-											Included
-										</td>
-									</tr>
-									
-									<tr>
-										<td>
-											Sales Tax
-										</td>
-										<td id="pdf_sales_tax">
-											$--
-										</td>
-									</tr>
-									
-								</table>
-							</td>
-							
-						</tr>
-					</tbody>
-				</table>
+						</div>
+					</div>
+				</div>
 				
-				<h3 class="text-bold text-center"><span class="font_h3">Terms and Conditions</span></h3>
-				<ol>
-					<li>In the provision of providing and delivering the services and/or products to the Client, UPGRADE shall
-					always be a dealer, but not the manufacturer.</li>
-					<li>The estimated time of arrival of the Cabinetry shall be <span> <span id="pdf_lead_time" class="underline"></span> </span> weeks from the date of signing this
-					agreement.</li>
-					<li>UPGRADE may not be held liable for any conflicts, delays, or rescheduling due to the manufacturer’s fault.</li>
-					<li>The exact delivery/ installation date will be provided before 1-2 weeks by the project coordinator.</li>
-					<li>In the event delivery cannot be accepted by the Client due to any reason, the cabinetrywill be transferred
-					to a storage facility and will incur applicable charges per month (for storage + re-delivery).</li>
-					<li>Full payment shall be due upon completion of the cabinetry at the factory and scheduling of the delivery;
-					irrespective of delays or storage procedures.</li>
-					<li>The installation is performed by independent installation companies, for which UPGRADE may not be held
-					liable - including their schedule of work.</li>
-					<li>All wood species are a product of nature in which variations in color, grain pattern, textures, and density
-					are unique. Due to the natural grain properties inherent in all wood species, these natural variations are
-					not considered defects.</li>
-					<li>A physical sample of each finish/color was approved prior to signing this document and is noted in the
-					above chart. Upgrade is not responsible for any selections not approved in person.</li>
-					<li>By signing this document, I agree to the aforementioned terms;and the attached floor plan.</li>
-				</ol>
-				<br/>
-				<table class="bck_grey red_line pad_td_10 table_w_100" style={background-color:#ccc;}>
-					<tr class=""> <td class="text-left">Signature ___________________________</td> 
-					<td class="text-right"> Date : _ _ / _ _ / _ _   &nbsp; &nbsp;&nbsp;&nbsp;</td>  </tr>
-				</table>
 				
-		
-			</tbody>
-		</table>
-	
-	
-	
+				<div id="terms_conditions" class="table_container">
+					<h2>Terms and Conditions</h2>
+				
+					<ol>
+						<li>In the provision of providing and delivering the services and/or products to the Client, UPGRADE shall
+						always be a dealer, but not the manufacturer.</li>
+						<li>The estimated time of arrival of the Cabinetry shall be <span> <span id="pdf_lead_time" class="underline"></span> </span> weeks from the date of signing this
+						agreement.</li>
+						<li>UPGRADE may not be held liable for any conflicts, delays, or rescheduling due to the manufacturer’s fault.</li>
+						<li>The exact delivery/ installation date will be provided before 1-2 weeks by the project coordinator.</li>
+						<li>In the event delivery cannot be accepted by the Client due to any reason, the cabinetrywill be transferred
+						to a storage facility and will incur applicable charges per month (for storage + re-delivery).</li>
+						<li>Full payment shall be due upon completion of the cabinetry at the factory and scheduling of the delivery;
+						irrespective of delays or storage procedures.</li>
+						<li>The installation is performed by independent installation companies, for which UPGRADE may not be held
+						liable - including their schedule of work.</li>
+						<li>All wood species are a product of nature in which variations in color, grain pattern, textures, and density
+						are unique. Due to the natural grain properties inherent in all wood species, these natural variations are
+						not considered defects.</li>
+						<li>A physical sample of each finish/color was approved prior to signing this document and is noted in the
+						above chart. Upgrade is not responsible for any selections not approved in person.</li>
+						<li>By signing this document, I agree to the aforementioned terms;and the attached floor plan.</li>
+					</ol>
+				</div>
+				<p>&nbsp;</p>
+				<div id="sign_date" class="table_container">
+					<div>
+						<div class="text-left">Signature : _______________________________________________________</div> 
+						<div class="text-right">Date : ____________________________________________</div> 
+					</div>				
+				</div>
+			</div>
+		</div>
 	</div>
-
+	
 	<script src="js/jquery.min.js"></script>
 	<script src="js/print.min.js"></script>
 	<script src="js/jquery_validate.js"></script>		
