@@ -238,7 +238,7 @@ $(document).ready(function(){
 				jQuery('#pdf_lead_time').text(lead_time);
 				
 				
-				// setTimeout( function(){ printJS('editor', 'html') }, 1000)
+				 setTimeout( function(){ printJS('editor', 'html') }, 2000)
 				// printJS('editor', 'html');
 				/*
 				printJS({
