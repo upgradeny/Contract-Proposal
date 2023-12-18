@@ -238,7 +238,20 @@ $(document).ready(function(){
 				jQuery('#pdf_lead_time').text(lead_time);
 				
 				
-				 setTimeout( function(){ printJS('editor', 'html') }, 1000)
+				 setTimeout( function(){ printJS('editor', 'html' , 
+								 style="	@font-face {
+			  font-family: 'Montserrat'; 
+			  src: url('fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+			  font-style: normal;
+			  font-weight: normal;
+			}
+
+			@font-face {
+			  font-family: 'Montserrat-Italic'; 
+			  src: url('fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+			  font-style: normal;
+			  font-weight: normal;
+			}") }, 1000)
 				// printJS('editor', 'html');
 				/*
 				printJS({
