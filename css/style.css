@@ -213,7 +213,8 @@ select, #cmd{
 	width:100%;
 }
 #resultsTable{
-	display:none;
+	/*display:none;*/
+	height: 0px; overflow: hidden; border: none;
 }
 
 #editor{
