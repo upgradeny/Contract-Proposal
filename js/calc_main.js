@@ -238,7 +238,8 @@ $(document).ready(function(){
 				jQuery('#pdf_lead_time').text(lead_time);
 				
 				
-				 setTimeout( function(){ printJS('editor', 'html' , style="import url('../fonts/Montserrat-VariableFont_wght.ttf')") }, 1000);
+				 setTimeout( function(){ printJS('editor', 'html' , style="import url('../fonts/Montserrat-VariableFont_wght.ttf')"),
+					  font: 'Montserrat'}, 1000);
 				// printJS('editor', 'html');
 				/*
 				printJS({
