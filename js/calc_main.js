@@ -239,11 +239,11 @@ $(document).ready(function(){
 				
 				
 				// setTimeout( function(){ 
-					 printJS(
+					 printJS({
 						 printable: 'editor',
     						type: 'html',
 						 style:"import url('../fonts/Montserrat-VariableFont_wght.ttf')",
-					 	 font: 'Montserrat') ;
+					 	 font: 'Montserrat' }) ;
 					// )}, 1000);
 	
 				// printJS('editor', 'html');
