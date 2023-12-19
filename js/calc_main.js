@@ -242,7 +242,7 @@ $(document).ready(function(){
 					 printJS({
 						 printable: 'editor',
     						type: 'html',
-						 css: 'css_fonts.css',
+						 css: 'https://upgradeny.github.io/Contract-Proposal/css/css_fonts.css',
 					 	 font: 'Montserrat' }) ;
 					// )}, 1000);
 	
