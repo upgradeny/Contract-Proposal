@@ -8,8 +8,16 @@ $(document).ready(function(){
 			function numberWithCommas(x) {
 				return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 			}
-			
-			
+			let font = "";
+			function printPDF_proposal() {
+				printJS({
+			  	printable: 'editor',
+			    	type: 'html',
+			    	style: "@import url('https://upgradeny.github.io/Contract-Proposal/fonts/Montserrat-Italic-VariableFont_wght.ttf')",
+			    	font: 'Montserrat'
+			  })
+			}
+	
 			jQuery.validator.addMethod("phonenu", function (value, element) {
 				if ( /^[\(\)\.\- ]{0,}[0-9]{3}[\(\)\.\- ]{0,}[0-9]{3}[\(\)\.\- ]{0,}[0-9]{4}[\(\)\.\- ]{0,}$/.test(value)) {
 					return true;
@@ -238,12 +246,14 @@ $(document).ready(function(){
 				jQuery('#pdf_lead_time').text(lead_time);
 				
 				
-				// setTimeout( function(){ 
+				setTimeout( function(){ printPDF_proposal() },1000);
+				/*
 					 printJS({
 						 printable: 'editor',
     						type: 'html',
 						 css: 'https://upgradeny.github.io/Contract-Proposal/css/css_fonts.css',
 					 	 font: 'Montserrat' }) ;
+	*/
 					// )}, 1000);
 	
 				// printJS('editor', 'html');
