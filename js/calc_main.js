@@ -242,7 +242,7 @@ $(document).ready(function(){
 					 printJS({
 						 printable: 'editor',
     						type: 'html',
-						 style:"import url('../fonts/Montserrat-VariableFont_wght.ttf')",
+						 css: 'css_fonts.css',
 					 	 font: 'Montserrat' }) ;
 					// )}, 1000);
 	
