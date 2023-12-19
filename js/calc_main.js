@@ -245,8 +245,9 @@ $(document).ready(function(){
 				var lead_time = jQuery('#lead_time').val();
 				jQuery('#pdf_lead_time').text(lead_time);
 				
-				
-				setTimeout( function(){ printPDF_proposal() },1000);
+				printJS('editor', 'html');
+				//setTimeout( function(){ printPDF_proposal() },1000);
+				//setTimeout( function(){ printJS('editor', 'html') },1000);
 				/*
 					 printJS({
 						 printable: 'editor',
