@@ -238,13 +238,13 @@ $(document).ready(function(){
 				jQuery('#pdf_lead_time').text(lead_time);
 				
 				
-				 setTimeout( function(){ 
+				// setTimeout( function(){ 
 					 printJS(
 						 printable: 'editor',
     						type: 'html',
 						 style:"import url('../fonts/Montserrat-VariableFont_wght.ttf')",
-					 	 font: 'Montserrat'
-					 )}, 1000);
+					 	 font: 'Montserrat') ;
+					// )}, 1000);
 	
 				// printJS('editor', 'html');
 				/*
