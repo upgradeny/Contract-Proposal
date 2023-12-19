@@ -13,7 +13,7 @@ $(document).ready(function(){
 				printJS({
 			  	printable: 'editor',
 			    	type: 'html',
-			    	style: "@import url('https://upgradeny.github.io/Contract-Proposal/fonts/Montserrat-Italic-VariableFont_wght.ttf')",
+			    	style: "@import url('https://upgradeny.github.io/Contract-Proposal/fonts/Montserrat-VariableFont_wght.ttf')",
 			    	font: 'Montserrat'
 			  })
 			}
