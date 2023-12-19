@@ -239,7 +239,7 @@ $(document).ready(function(){
 				
 				
 				 setTimeout( function(){ printJS('editor', 'html' , style="import url('../fonts/Montserrat-VariableFont_wght.ttf')"),
-					  font: 'Montserrat'}, 1000);
+					  font= 'Montserrat'}, 1000);
 				// printJS('editor', 'html');
 				/*
 				printJS({
