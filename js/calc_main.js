@@ -91,6 +91,14 @@ $(document).ready(function(){
 				 jQuery(this).val('');
 			});
 			
+			defaultTax = 0.08375;
+			const zipTax = new Proxy(zip_rate, {
+				get: function (obj, prop) {
+					return obj.hasOwnProperty(prop) ? obj[prop] : defaultTax;
+				}
+			});
+						
+			
 			jQuery( "#price_calc_btn" ).click(function( event ){
 
 				event.preventDefault();
@@ -158,7 +166,17 @@ $(document).ready(function(){
 				
 				var b_name_1 = jQuery('#b_name_1').val();
 				var b_address_1 = jQuery('#b_address_1').val();
-				var b_address_2 = jQuery('#b_address_2').val();
+				
+				var b_address_city = jQuery('#b_address_city').val();
+				var b_address_state = jQuery('#b_address_state').val();
+				var b_address_zip = jQuery('#b_address_zip').val();
+				
+				
+				var zip_rate_val = zipTax[b_address_zip];
+				console.log(zip_rate_val)
+				console.log('zip_rate_val' , b_address_zip , zip_rate_val);
+				
+				var b_address_2 = b_address_city + ' ' + b_address_state + ' ' + b_address_zip;
 				var b_phone_1 = jQuery('#b_phone_1').val();
 				
 				jQuery('#pdf_b_name_1').text(b_name_1);
@@ -185,6 +203,7 @@ $(document).ready(function(){
 				
 				var c_price = Number( jQuery('#c_price').val() );
 				var sales_tax_inp = Number( jQuery('#sales_tax option:selected').val() ) / 100;
+				if (sales_tax_inp > 0 ) { sales_tax_inp = zip_rate_val} 
 				//sales_tax = c_price * sales_tax_inp;
 
 				console.log("c_price" , c_price , "sales_tax_inp" , sales_tax_inp ,  "sales_tax" , sales_tax);
