@@ -21,7 +21,8 @@
 	</style>
 <script src="js/jquery.min.js"></script>
 	<script src="js/print.min.js"></script>
-	<script src="js/jquery_validate.js"></script>		
+	<script src="js/jquery_validate.js"></script>
+	<script src="js/zip_rate.js"></script>	
 	<script src="js/calc_main.js"></script>
 	<script type= "text/javascript" src= "./js/bootstrap-datepicker.min.js"></script> 	
 </head>
@@ -77,12 +78,16 @@
 								<input type="text" id="b_address_1" class="number_req form-control b_address_1 address_class" name ="b_address_1" value="21 Overbrook Dr"/>
 							</div>
 						</div>
-						<div class="flex_row_inp">
-							<label>
-								Delivery Address 2
-							</label>
-							<div class="">
-								<input type="text" id="b_address_2" class="number_req form-control b_address_2 address_data_2" name ="b_address_2" value="Monsey NY 10952"/>
+						<div class="flex_row_inp no-gutters">
+							
+							<div class="col-sm-4">
+								<input type="text" id="b_address_city" class="number_req form-control b_address_city b_address_city_data_2" name ="b_address_city"  placeholder="City"/>
+							</div>
+							<div class="col-sm-4">
+								<input type="text" id="b_address_state" class="number_req form-control b_address_state b_address_state_data_2" name ="b_address_state"  placeholder="State"/>
+							</div>
+							<div class="col-sm-4">
+								<input type="text" id="b_address_zip" class="number_req form-control b_address_zip b_address_zip_data_2" name ="b_address_zip"  placeholder="Zip"/>
 							</div>
 						</div>
 						<!--
