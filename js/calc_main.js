@@ -257,7 +257,7 @@ $(document).ready(function(){
 				
 				
 				var fifty_remaining_1 =  ( round_2_digits( totalDue - retainer_paid - fifty_due_1 ) );
-				fifty_remaining_1 = fifty_remaining_1 + (retainer_paid/2)
+				
 				//var fifty_remaining_1_date =  jQuery('#fifty_remaining_1_date').val() ;
 				
 				jQuery('#pdf_fifty_remaining_1').text( `$ ${numberWithCommas ( round_2_digits( fifty_remaining_1 ) )}`);
