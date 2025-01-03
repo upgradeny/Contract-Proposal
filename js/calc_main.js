@@ -126,6 +126,7 @@ $(document).ready(function(){
 				jQuery('#pdf_delivery_contact').text(delivery_contact);
 				jQuery('#pdf_project_email').text(project_email);
 				jQuery('#pdf_kitchen_designer').text(kitchen_designer);
+				jQuery('#pdf_main_date').text(main_date);
 				
 				
 				//----------------------   Cabinetry ---------------------------
