@@ -893,11 +893,12 @@
 			 var date = new Date();
   var today = new Date(date.getFullYear(), date.getMonth(), date.getDate());
 			jQuery(".date_picker_input").datepicker({
-			   format: 'D, dd M yyyy',
+			   format: 'M dd, yyyy',
 				startDate: today,
 			});
 			jQuery(".date_picker_input").datepicker('setDate', today);
 			/*
+   // format: 'D, dd M yyyy',
 			jQuery('#price_calc_btn').click(function () {   
 				setTimeout( function(){ printJS('editor', 'html') }, 1000)								
 				});	
