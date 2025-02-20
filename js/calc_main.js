@@ -97,6 +97,16 @@ $(document).ready(function(){
 					return obj.hasOwnProperty(prop) ? obj[prop] : defaultTax;
 				}
 			});
+			
+			
+			jQuery('#add_rooms_chkbox').change(function() {
+				if (this.checked) {
+					jQuery('#rooms_input_container').show(); // Show the full-width input
+				} else {
+					jQuery('#rooms_input_container').hide(); // Hide the full-width input
+					jQuery('#input_rooms').val('')
+				}
+			});
 						
 			
 			jQuery( "#price_calc_btn" ).click(function( event ){
@@ -127,6 +137,19 @@ $(document).ready(function(){
 				jQuery('#pdf_project_email').text(project_email);
 				jQuery('#pdf_kitchen_designer').text(kitchen_designer);
 				jQuery('#pdf_main_date').text(main_date);
+				
+				
+				
+				var input_rooms = $('#input_rooms').val().trim(); 
+				
+				if (input_rooms != "") {
+					jQuery('#pdf_add_room_div').show();
+					jQuery('#pdf_input_rooms').text(input_rooms);
+				} else{
+					
+					jQuery('#pdf_add_room_div').hide();
+					jQuery('#pdf_input_rooms').text(' ');
+				}
 				
 				
 				//----------------------   Cabinetry ---------------------------
