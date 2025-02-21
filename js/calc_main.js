@@ -144,7 +144,7 @@ $(document).ready(function(){
 				
 				if (input_rooms != "") {
 					jQuery('#pdf_add_room_div').show();
-					jQuery('#pdf_input_rooms').text(input_rooms);
+					jQuery('#pdf_input_rooms').text(" - " + input_rooms + " - See plans for specs");
 				} else{
 					
 					jQuery('#pdf_add_room_div').hide();
