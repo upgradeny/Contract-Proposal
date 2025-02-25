@@ -179,7 +179,7 @@
 					
 						<div class="col-sm-6 flex_col" style="margin-top: 5px;">
 							<div class="flex_row_inp">
-								<label>
+								<label  style="min-height: 25px;">
 									<input type="checkbox" id="add_rooms_chkbox" class="checkbox"> Additional Rooms
 								</label>
 								<div class="flex_row_inp" id="rooms_input_container" style="display: none;">
@@ -810,12 +810,13 @@
 							<span id="pdf_b_name_1">Hershy Fischer </span><br/> 
 							<span id="pdf_b_address_1">21 Overbrook Dr  </span> <br/> 
 							<span id="pdf_b_address_2">Monsey NY 10952  </span>
-							<div class="" id="pdf_add_room_div"> Additional Rooms <span id="pdf_input_rooms" class=""> </span> </div>	
+								
 						</div>
 						<div class="right_sec">
-							<div class=""> Delivery Contact :  <span id="pdf_delivery_contact" class="input_value"> </span> </div>
-							<div class=""> Kitchen Designer :  <span id="pdf_kitchen_designer" class="input_value"> </span> </div>
-							<div class=""> Date :  <span id="pdf_main_date" class="input_value"> </span> </div>						
+							<div class=""> Delivery Contact:  <span id="pdf_delivery_contact" class="input_value"> </span> </div>
+							<div class=""> Kitchen Designer:  <span id="pdf_kitchen_designer" class="input_value"> </span> </div>
+							<div class=""> Date:  <span id="pdf_main_date" class="input_value"> </span> </div>
+							<div class="" id="pdf_add_room_div"> Additional Rooms: <span id="pdf_input_rooms" class=""> </span> </div>
 						</div>
 						<!--<br/> <span id="pdf_main_date">Date</span>-->
 					</div>
@@ -825,21 +826,21 @@
 					<h2>Specifications</h2>
 					<div id="specs_div" class="table_bck">
 						<div class="flex_table">
-								<div> Manufacturer :  <span id="pdf_c_vendor" class="td_value"> </span> 				</div>
-								<div> Door Style : <span id="pdf_c_doorstyle" class="td_value">  </span> 				</div>
-								<div> Door Finish :  <span id="pdf_c_finish" class="td_value"> </span> 					</div>
-								<div> Door Species : <span id="pdf_c_species" class="td_value"> </span> 				</div>
-								<div> Door Overlay :  <span id="pdf_c_overlay" class="td_value"> </span> 				</div>
-								<div> Box Construction :<span id="pdf_c_box_construction" class="td_value"> </span> 	</div>
+								<div> Manufacturer:  <span id="pdf_c_vendor" class="td_value"> </span> 				</div>
+								<div> Door Style: <span id="pdf_c_doorstyle" class="td_value">  </span> 				</div>
+								<div> Door Finish:  <span id="pdf_c_finish" class="td_value"> </span> 					</div>
+								<div> Door Species: <span id="pdf_c_species" class="td_value"> </span> 				</div>
+								<div> Door Overlay:  <span id="pdf_c_overlay" class="td_value"> </span> 				</div>
+								<div> Box Construction: <span id="pdf_c_box_construction" class="td_value"> </span> 	</div>
 						</div>
 						<div class="flex_table">
 								
-								<div> Box Style : 			<span id="pdf_c_box_style" class="td_value"> </span>        </div>
-								<div> Drawerbox : 			<span id="pdf_c_drawer_box" class="td_value"> </span>       </div>
-								<div> Hardware : 			<span id="pdf_c_hardware" class="td_value"> </span>         </div>
-								<div> Crown Molding : 		<span id="pdf_c_crown_molding" class="td_value"> </span>    </div>
-								<div> Undercabinet Lightning <span id="pdf_c_under_cab_light" class="td_value"> </span> </div>
-								<div> Countertop : 			<span id="pdf_c_countertop" class="td_value"> </span>       </div>
+								<div> Box Style: 			<span id="pdf_c_box_style" class="td_value"> </span>        </div>
+								<div> Drawerbox: 			<span id="pdf_c_drawer_box" class="td_value"> </span>       </div>
+								<div> Hardware: 			<span id="pdf_c_hardware" class="td_value"> </span>         </div>
+								<div> Crown Molding: 		<span id="pdf_c_crown_molding" class="td_value"> </span>    </div>
+								<div> Undercabinet Lightning: <span id="pdf_c_under_cab_light" class="td_value"> </span> </div>
+								<div> Countertop: 			<span id="pdf_c_countertop" class="td_value"> </span>       </div>
 								
 						</div>
 					</div>
@@ -850,21 +851,21 @@
 					<div id="payment_sch_div" class="table_bck">
 						<div class="flex_table">
 								 					
-								<div> Cabinetry : <span id="pdf_c_price" class="td_value"> </span> 				</div>
-								<div> Installation :  <span id="pdf_installation" class="td_value"> </span> 				</div>							
-								<div> Counter Top :  <span id="pdf_counter_top" class="td_value"> </span> 				</div>
-								<div> Pulls & Knobs : <span id="pdf_pulls_knobs" class="td_value">  </span> 				</div>
-								<div class=""> Sales Tax :  <span id="pdf_sales_tax" class="td_value"> </span> 				</div>
+								<div> Cabinetry: <span id="pdf_c_price" class="td_value"> </span> 				</div>
+								<div> Installation:  <span id="pdf_installation" class="td_value"> </span> 				</div>							
+								<div> Counter Top:  <span id="pdf_counter_top" class="td_value"> </span> 				</div>
+								<div> Pulls & Knobs: <span id="pdf_pulls_knobs" class="td_value">  </span> 				</div>
+								<div class=""> Sales Tax:  <span id="pdf_sales_tax" class="td_value"> </span> 				</div>
 								
 						</div>
 						<div class="flex_table">
 								
 								
-								<div> Delivery : <span id="pdf_delivery" class="td_value"> Included </span> 					</div>
-								<div> Retainer :  <span id="pdf_retainer_paid" class="td_value"> $-- </span> 				</div>
-								<div> 50% due upon signing proposal : <span id="pdf_fifty_due_1" class="td_value">  </span> 				</div>
-								<div> 50% or remaining balance due prior to delivery :  <span id="pdf_fifty_remaining_1" class="td_value"> </span> </div>
-								<div class="red"> Total Due :  <span id="pdf_totalDue" class="td_value red"> $-- </span> 				</div>
+								<div> Delivery: <span id="pdf_delivery" class="td_value"> Included </span> 					</div>
+								<div> Retainer:  <span id="pdf_retainer_paid" class="td_value"> $-- </span> 				</div>
+								<div> 50% due upon signing proposal: <span id="pdf_fifty_due_1" class="td_value">  </span> 				</div>
+								<div> 50% or remaining balance due prior to delivery:  <span id="pdf_fifty_remaining_1" class="td_value"> </span> </div>
+								<div class="red"> Total Due:  <span id="pdf_totalDue" class="td_value red"> $-- </span> 				</div>
 					
 						</div>
 					</div>
